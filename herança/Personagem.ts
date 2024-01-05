@@ -4,14 +4,14 @@
 // criar classe Warrior, Priest e Mage
 // Warrior terá forca e agilidade
 
-import { Util } from "./Util";
+import { Util } from "../herança/Util";
 
 export class Personagem {
-  protected _nome = '';
+  protected _nome = "";
   protected energia = 0;
   protected vidaMaxima = 0;
   protected vidaAtual = 0;
-  protected ataque  = 0;
+  protected ataque = 0;
   protected defesa = 0;
 
   constructor(nome: string) {
