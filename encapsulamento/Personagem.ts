@@ -1,11 +1,6 @@
-
-// criar método helper randomizar que receber um fator: number
-// abstrair com o método helper o código repetido
-// criar o método de get e seguir a convenção para atributos privados
-
 export class Personagem {
   constructor(
-    private nome: string,
+    private _nome: string,
     private energia: number = 0,
     private vida: number = 0,
     private ataque: number = 0,
@@ -17,6 +12,16 @@ export class Personagem {
     this.energia -= this.randomizar(10);
   }
 
+  
+  public get nome() {
+    return this._nome;
+  }
+
+  public set nome(nome: string) {
+    this._nome = nome;
+    return;
+  }
+  
   public treinarDefesa() {
     this.defesa += this.randomizar(7);
     this.energia -= this.randomizar(10);
